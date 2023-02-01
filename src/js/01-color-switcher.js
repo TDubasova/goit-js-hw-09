@@ -1,16 +1,15 @@
 const refs = {
-  body: document.body,
   btnStart: document.querySelector('[data-start]'),
   btnStop: document.querySelector('[data-stop]'),
 };
-const { btnStart, btnStop, body } = refs;
+const { btnStart, btnStop } = refs;
 
 btnStart.addEventListener('click', onBtnStartClick);
 btnStop.addEventListener('click', onBtnStoptClick);
 
 function onBtnStartClick() {
   timerId = setInterval(() => {
-    body.style.backgroundColor = getRandomHexColor();
+    document.body.style.backgroundColor = getRandomHexColor();
   }, 1000);
   btnStart.setAttribute('disabled', true);
   btnStop.removeAttribute('disabled');
