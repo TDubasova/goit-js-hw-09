@@ -3,6 +3,7 @@ const refs = {
   btnStop: document.querySelector('[data-stop]'),
 };
 const { btnStart, btnStop } = refs;
+let timerId = null;
 
 btnStart.addEventListener('click', onBtnStartClick);
 btnStop.addEventListener('click', onBtnStoptClick);
