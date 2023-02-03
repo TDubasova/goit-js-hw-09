@@ -67,7 +67,6 @@ class Timer {
      
       if (deltaTime < 1000) {
         clearInterval(this.intervalId);
-        btnStart.removeAttribute('disabled');
       }
     }, 1000);
   }
